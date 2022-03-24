@@ -137,19 +137,15 @@ Attribute collection can have Max 20 objects. Attributes whose name is inconsist
 | name | T | attribute code from the WMS attribute definition | varchar(50) |`pdef_code`
 | value|T | value inserted in corresponding attribute of document header | varchar(50) | `door_attribXX`
 
-
+> The `Container Number` attribute is dedicated to the **Sunway** project. It can be used in both input and output documents. The attribute is not mandatory. If it is not completed there is no need to insert the attribute section into the file.
 
 JSON example: 
 ```json
   "document_attribute": {
     "attribute": [
       {
-        "name":"customs_number",
+        "name":"Container Number",
         "value": "123456"
-      },
-      {
-        "name": "order_number",
-        "value": "hth/2020/829347"
       }
     ]
   }
@@ -160,12 +156,8 @@ XML example:
 ```XML
         <document_attribute>
             <attribute>
-                <name> customs_number</name>
+                <name>Container Number</name>
                 <value>123456</value>
-            </attribute>
-            <attribute>
-                <name> order_number</name>
-                <value>hth/2020/829347</value>
             </attribute>
         </document_attribute>
 ```
@@ -213,6 +205,33 @@ SSCC|N|Pallet number Can be optionally used only in Purchase order **type = IN**
 | pallet_type |N| pallet type only used for delivery advice. Used only when completing the SSCC|varchar(50) |`dori_luType` 
 item_attribute |N | Document Item atributes. If no Quality status attribute is defined a default value for Quality status is inserted.|collection
 
+
+
+## item attribute Collection
+
+Attribute collection can have Max 10 objects. Not Required
+
+| Field | Required | Description | Data type| WMS field |
+|--|--|--|--|--|
+| name | T | attribute code from the WMS attribute definition | varchar(50) |`pdef_code`
+| value|T | value inserted in corresponding attribute of document item | varchar(50) | `stk_attribXX`
+
+
+JSON example: 
+
+```json
+ "item_attributes": {
+            "attribute": [
+              {
+                "name": "LOT",
+                "value": "ABCD826"
+              }
+            ]
+```
+ > In the interface with Sunway, the LOT attribute will be used optionally. 
+For indexes that have lot numbers that will be registered on reception. Logsoft will send the scanned lot numbers in the purchase order confirmation file.
+
+
 ### Return message
 Contains the same information as the input message extended with fields:
 
@@ -254,12 +273,8 @@ Przykład dokumet typu OUT:
       "document_attributes": {
         "attribute": [
           {
-            "name": "Custom_document_No",
+            "name": "Container Number",
             "value": "123456"
-          },
-          {
-            "name": "Order_nr",
-            "value": "hth/2020/829347"
           }
         ]
       }
@@ -320,10 +335,6 @@ Przykład dokumet typu OUT:
               {
                 "name": "nr_LOT",
                 "value": "ABCD826"
-              },
-              {
-                "name": "Quality_status",
-                "value": "OK"
               }
             ]
           }
@@ -365,12 +376,8 @@ Przykład skonwertowany do formatu XML
 		</courier>
 		<document_attributes>
 			<attribute>
-				<name>Custom_document_No</name>
+				<name>Container Number</name>
 				<value>123456</value>
-			</attribute>
-			<attribute>
-				<name>Order_nr</name>
-				<value>hth/2020/829347</value>
 			</attribute>
 		</document_attributes>
 	</header>
@@ -424,10 +431,6 @@ Przykład skonwertowany do formatu XML
 				<attribute>
 					<name>nr_LOT</name>
 					<value>ABCD826</value>
-				</attribute>
-				<attribute>
-					<name>Quality_status</name>
-					<value>OK</value>
 				</attribute>
 			</item_attributes>
 		</item>
