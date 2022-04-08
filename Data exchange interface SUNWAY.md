@@ -4,7 +4,6 @@
 
 A document contains a standardized format to exchange information related to purchase orders and customer orders.
 
-
 ## Header object
 
 
@@ -31,8 +30,6 @@ Contains the same fields as the input message extended with fields:
 |--|--|--|--|--|--|
 OUT_document_nr| T|[For feedback message only] document number in WMS|nvarchar(25) | `ddoc_code`.
 OUT_date_creation| T| [For feedback only] date of creation/import of document|Datetime | `door_dateCreated`
-OUT_date_closed |T| [For feedback only] date of document closure  | Datetime | `door_dateClosed`
-
 
 
 ## Firm object
@@ -223,13 +220,13 @@ JSON example:
  "item_attributes": {
             "attribute": [
               {
-                "name": "LOT",
+                "name": "Serial",
                 "value": "ABCD826"
               }
             ]
 ```
- > In the interface with Sunway, the LOT attribute will be used optionally. 
-For indexes that have lot numbers that will be registered on reception. Logsoft will send the scanned lot numbers in the purchase order confirmation file.
+ > In the interface with Sunway, the Serial attribute will be used optionally. 
+For indexes that have Serial numbers that will be registered on reception. Logsoft will send the scanned Serial numbers in the purchase order confirmation file. 
 
 
 ### Return message
@@ -333,7 +330,7 @@ Przykład dokumet typu OUT:
           "item_attributes": {
             "attribute": [
               {
-                "name": "nr_LOT",
+                "name": "Serial",
                 "value": "ABCD826"
               }
             ]
@@ -429,7 +426,7 @@ Przykład skonwertowany do formatu XML
 			<ordered_quantity>4</ordered_quantity>
 			<item_attributes>
 				<attribute>
-					<name>nr_LOT</name>
+					<name>Serial</name>
 					<value>ABCD826</value>
 				</attribute>
 			</item_attributes>
