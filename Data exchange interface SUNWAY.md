@@ -12,7 +12,7 @@ A document contains a standardized format to exchange information related to pur
 | type | T | specifies the type of document **OUT** for input documents **IN** for output documents. For confirmations **CONFIRM-OUT** and **CONFIRM-IN** respectively.  | varchar(5)  
 orderer|T| From the point of view of the client (ERP system) it can be treated as a constant) | nvarchar(25) | `dord_code` 
 logistics_center | T | logistics center with WMS | nvarchar(25) | `whc_code`
-completion_date |T| requested completion date | smalldatetime | `door_expectedCompletion`
+completion_date |N| requested completion date | smalldatetime | `door_expectedCompletion`
 priority | N | value priority from 0 - 89 priority zero is the lowest. Priorities 90-99 reserved as special for internal use | smallint | `door_expectedCompletion`
 document_alternative_code|T | alternative order code - order code from customer ERP| nvarchar(50) | `door_alternativeCode`
 description|N|Description of the document|nvarchar(500) | `door_description`
