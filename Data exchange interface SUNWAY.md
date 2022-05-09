@@ -94,7 +94,7 @@ Contains the same as the input message extended with fields:
 
 | Field | Required | Description | Type of data| WMS field |
 |--|--|--|--|--|
-|OUT_nr_log_trucking|N |[Only for return message] number of the generated tracking number |nvarchar(50) |`door_tr_truckingNumber`.
+|OUT_truckingNumber|N |[Only for return message] number of the generated tracking number |nvarchar(50) |`door_tr_truckingNumber`.
 
 
 
