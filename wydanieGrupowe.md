@@ -1,0 +1,3 @@
+# wydanie grupowe
+
+## Parametry
