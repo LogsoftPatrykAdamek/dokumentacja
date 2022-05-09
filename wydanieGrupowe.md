@@ -1,6 +1,6 @@
 # wydanie grupowe
 
-### Słownik
+## Słownik
 
 **Zlecenie jednosztukowe** - zamówienie zawierajaca jedna sztuke towaru wysylkowego (uwaga zlecenie jednosztukowe może być realizowane jako grupowe jeśli w systemie jest   inne aktywne zamówienie dla tego samego klienta z tym samym adresem wysyłkowym)
 
@@ -10,7 +10,7 @@
 
 **Zlecenie grupowe** - zamówienie klienta zawierające więcej niż jedną sztukę towaru nie będące zleceniem pojedynczym
 
-### Zasady grupowania
+## Zasady grupowania
 
 - wyszukujemy zlecenia o najwyższym priorytecie
 - spośród zleceń o najwyższym priorytecie sprawdzamy czy jest jakieś do którego możemy dobrać inne pod ten sam adres 
@@ -19,5 +19,32 @@
 - jeśli zlecenie sztukowe dobieramy inne zlecenia sztukowe
 - jeśli zlecenie za duże żeby grupować lub zostaja spełnikoen warunki z widoku `v_doorGroupSkipGrouping` puszczamy pojedyncze zlecenie
 
+## Priorytety wysyłek
+
+> ***Priorytet 0 jest priorytetem najwyższym wszelkie operacje powinny być sortowane rosnąco***
+
+Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
+
+-   0-89 - standardowe priorytety 
+-   97 - specjalny zlecenia o tym priorytecie nie są grupowane
+-   99 - specjalny zlecenia o tym priorytecie są pomijane podczas planowania i uzupełniania zbiórki
+
 
 ## Parametry
+
+| Parametr| Opis | Użyty w |Od wersji|
+|--|--|--|--|
+|**groupPicking_autoGroup**|włącza wydruk grupowej listy zbiórki na formatce `doc_autoPrintTaskList`|`doc_autoPrintTaskList`||
+|**groupPicking_maxOrderQty**|max ilość zleceń w grupie|||
+|**groupPicking_maxWeight**|max waga zleceń w grupie|
+|**groupPicking_maxVolume**|max objętość zleceń w grupie
+
+
+## obiekty do przerzucenia
+
+door_groupInfo
+door_groupPlan
+door_groupNextOrderPlanNEW
+
+
+
