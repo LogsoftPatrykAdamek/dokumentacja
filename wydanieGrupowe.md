@@ -47,7 +47,7 @@ Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
 | Parametr| Opis | Użyty w |Od wersji|
 |--|--|--|--|
 |**groupPickingTer_listShowAllGroups**|Wyswietla wszytkie aktywne grupy/listy zbiórki lub ogranicza tylko do konkretnego uzytkownika|||
-| funkcja `dbo.ter_getOrderlistText(door_id)`|Buduje wyswietlany tekst przy liscie zlceń | ||
+| funkcja `dbo.ter_getOrderlistText(door_id)`|Buduje wyswietlany tekst przy liscie zlceń. Uwaga na terminalu z CE wyswietla sie uproszczona wersja w prównaniu z Windows lub Androidem| ||
 
 
 TO DO
