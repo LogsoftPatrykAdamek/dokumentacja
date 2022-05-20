@@ -25,12 +25,13 @@
 
 Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
 
--   0-89 - standardowe priorytety 
--   97 - specjalny zlecenia o tym priorytecie nie są grupowane
--   99 - specjalny zlecenia o tym priorytecie są pomijane podczas planowania i uzupełniania zbiórki
+| Priorytet| Planowanie | Uzupełnianie |Uzupełnianie|Grupowanie| Uwagi|
+|--|--|--|--|--|--|
+|0-89|+|+|+|+| standardowe priorytety 
+|97|+|+|+| - |specjalny zlecenia o tym priorytecie nie są grupowane i wyswietlaja sie na terminalu na liście zleceń do wyboru
+|99|-|-|-| - |specjalny zlecenia o tym priorytecie są pomijane podczas planowania i uzupełniania zbiórki i grupowania
 
-
-## Parametry
+## Parametry grupowanie
 
 | Parametr| Opis | Użyty w |Od wersji|
 |--|--|--|--|
@@ -39,6 +40,21 @@ Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
 |**groupPicking_maxWeight**|max waga zleceń w grupie|
 |**groupPicking_maxVolume**|max objętość zleceń w grupie
 
+
+
+## Parametry proces na terminalu
+
+| Parametr| Opis | Użyty w |Od wersji|
+|--|--|--|--|
+|**groupPickingTer_listShowAllGroups**|Wyswietla wszytkie aktywne grupy/listy zbiórki lub ogranicza tylko do konkretnego uzytkownika|||
+| funkcja `dbo.ter_getOrderlistText(door_id)`|Buduje wyswietlany tekst przy liscie zlceń | ||
+
+
+TO DO
+
+
+- [ ] jesli potwerdzmy zbiórke **0** info dla wykonawcy ze potwerdzono z brakien
+- [x] jesli potwerdzmy zbiórke **0** blokujemy cały stok tego porduktu
 
 ## obiekty do przerzucenia
 
