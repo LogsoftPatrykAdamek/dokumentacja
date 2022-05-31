@@ -89,27 +89,27 @@ TO DO
 
 ## Obiekty do przerzucenia
 ###### Widoki:
-vstk_availableStockFullLU_strict
+- vstk_availableStockFullLU_strict
 ###### Funkcje:
-dbo.ter_getOrderlistText(door_id) - Buduje wyswietlany tekst przy liscie zlceń. Uwaga na terminalu z CE wyswietla sie uproszczona wersja w prównaniu z Windows lub Androidem| 
+- dbo.ter_getOrderlistText(door_id) - Buduje wyswietlany tekst przy liscie zlceń. Uwaga na terminalu z CE wyswietla sie uproszczona wersja w prównaniu z Windows lub Androidem| 
 ###### Procedury:
-door_groupInfo
-door_groupPlan
-door_groupNextOrderPlanNEW
-tsk_fastShippingFindStock_FAST - może już gdzieś być (wykorzystany w FAST_SHIPMENT_1PCS)
-tsk_fastShippingFindStock_fullLuOnly
-gp_pickingGetGroupList
-gp_generatePickingPathWithoutPlanningGrouped
-gp_getNextFullLuPickingTask
-gp_getNextPickingTaskGrouped - **UWAGA NIE POMYLIC Z ter_getNextPickingTaskGrouped**
-tsk_replanOrderPartly
-tsk_replanOrderPartlyGroup
-gp_getPickingWoPlanningMenuList
-gp_shipPalletNEW_validation
-tsk_generatePickingPathWithoutPlanningGroup
-tsk_confirmPickingNEW_1pcs_grouped
-tsk_confirmPickingNEW_1pcs_grouped_woControl
-tsk_confirmPickingNEW_grouped
+- door_groupInfo
+- door_groupPlan
+- door_groupNextOrderPlanNEW
+- tsk_fastShippingFindStock_FAST - może już gdzieś być (wykorzystany w FAST_SHIPMENT_1PCS)
+- tsk_fastShippingFindStock_fullLuOnly
+- gp_pickingGetGroupList
+- gp_generatePickingPathWithoutPlanningGrouped
+- gp_getNextFullLuPickingTask
+- gp_getNextPickingTaskGrouped - **UWAGA NIE POMYLIC Z ter_getNextPickingTaskGrouped**
+- tsk_replanOrderPartly
+- tsk_replanOrderPartlyGroup
+- gp_getPickingWoPlanningMenuList
+- gp_shipPalletNEW_validation
+- tsk_generatePickingPathWithoutPlanningGroup
+- tsk_confirmPickingNEW_1pcs_grouped
+- tsk_confirmPickingNEW_1pcs_grouped_woControl
+- tsk_confirmPickingNEW_grouped
 
 ## Nieoczywiste zależności
 - Jeśli występują produkty z numerami seryjnymi to wymagany jest TwoStepShippingPicking = 1, aby nie stracić informacji przy pakowaniu jednosztukowej zbiórki
