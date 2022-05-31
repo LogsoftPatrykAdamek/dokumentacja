@@ -13,9 +13,9 @@
 
 ## Numeratory
 WSPÓLNE DLA WSZYSTKICH ZLECENIODAWCÓW
-ZG______ - zbiórka grupowa wielosztukowa (standard)
-ZS______ - zbiórka grupowa zleceń jednosztukowych
-ZB______ - zbiórka batchowa
+- ZG______ - zbiórka grupowa wielosztukowa (standard)
+- ZS______ - zbiórka grupowa zleceń jednosztukowych
+- ZB______ - zbiórka batchowa
 
 ## Zasady grupowania
 
@@ -28,7 +28,7 @@ ZB______ - zbiórka batchowa
 
 ## Priorytety wysyłek
 
-> ***Priorytet 0 jest priorytetem najwyższym wszelkie operacje powinny być sortowane rosnąco***
+> ***Priorytet 0 jest priorytetem najniższym wszelkie operacje powinny być sortowane rosnąco***
 
 Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
 
