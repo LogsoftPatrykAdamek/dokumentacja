@@ -1,6 +1,3 @@
-
-
-
 # Lite WMS Orange wersja 4.5
 
 
@@ -42,7 +39,7 @@ Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
 -   kolejność wyświetlania zleceń na terminalu
 
 
-# wydanie grupowe
+# Wydanie grupowe
 
 ## Słownik
 
