@@ -1,4 +1,47 @@
 
+
+
+# Lite WMS Orange wersja 4.5
+
+
+# Wysyłki
+
+
+Ogólne informacje o wysyłkach
+
+### Typy wysyłek  
+Typ wysłki przechowywany jest w tabeli `doc_order` w polu `doc_orderType`
+
+|ID|KOD|Opis|		
+|----------------|-------------------------------|-----------------------------|
+|10|**Zbiórka automatyczna**  |Standardowa zbiórka z planowaniem
+|24|**Zaokr. do pełnych palet**  |Podczas splanowania system zaokrągla ilości do pełnych palet przy planowaniu
+|26|**Dowolne produkty**  |Wydanie bez planowania bez tworzenia pozycji zamówienia. System po zeskanowaniu palety sam dodaje odpowiednią pozycje zamówienia.
+|30|**Bez planowania**  |Wydanie bez planowania na terminalu. System bazując na pozycjach zamówienia podpowiada najlepszą paletę i tworzy zadanie
+
+
+## Priorytety wysyłek
+
+> ***Priorytet 0 jest priorytetem najniższym wszelkie operacje powinny być sortowane rosnąco***
+
+Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
+
+| Priorytet| Planowanie | Uzupełnianie |Uzupełnianie|Grupowanie| Uwagi|
+|--|--|--|--|--|--|
+|0-89|+|+|+|+| standardowe priorytety 
+|97|+|+|+| - |specjalny zlecenia o tym priorytecie nie są grupowane i wyswietlaja sie na terminalu na liście zleceń do wyboru
+|99|-|-|-| - |specjalny zlecenia o tym priorytecie są pomijane podczas planowania i uzupełniania zbiórki i grupowania
+
+
+#### Miejsca gdzie wykorzystane są priorytety
+
+
+-   planowanie wysyłki
+-   uzupełnianie zbiórki
+-   wydruk kart zbiórki
+-   kolejność wyświetlania zleceń na terminalu
+
+
 # wydanie grupowe
 
 ## Słownik
@@ -26,17 +69,7 @@ WSPÓLNE DLA WSZYSTKICH ZLECENIODAWCÓW
 - jeśli zlecenie sztukowe dobieramy inne zlecenia sztukowe
 - jeśli zlecenie za duże żeby grupować lub zostaja spełnikoen warunki z widoku `v_doorGroupSkipGrouping` puszczamy pojedyncze zlecenie
 
-## Priorytety wysyłek
 
-> ***Priorytet 0 jest priorytetem najniższym wszelkie operacje powinny być sortowane rosnąco***
-
-Ze względu na sposób obsługi priorytety dzielimy wg zakresu na:
-
-| Priorytet| Planowanie | Uzupełnianie |Uzupełnianie|Grupowanie| Uwagi|
-|--|--|--|--|--|--|
-|0-89|+|+|+|+| standardowe priorytety 
-|97|+|+|+| - |specjalny zlecenia o tym priorytecie nie są grupowane i wyswietlaja sie na terminalu na liście zleceń do wyboru
-|99|-|-|-| - |specjalny zlecenia o tym priorytecie są pomijane podczas planowania i uzupełniania zbiórki i grupowania
 
 ## Parametry grupowanie
 
