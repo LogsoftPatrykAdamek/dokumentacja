@@ -12,11 +12,6 @@ Proces w repoizytorium `TRASFERLU`
 | Parametr| Opis | Użyty w |Od wersji|
 |--|--|--|--|
 |**transferTer_InfoShowProductName**|Wyswietla pełną nazwę produktu przy wyswietlaniu infoirmacji o transferowanej palecie |`ter_LoadUnitINFOshort`||
+|**transferTer_InfoShowProductLocation**|Wyswietla listę 3 lokacji na których jest przechowywany dany pordukt. Wyswietlane od ostatniego transferu Wyswietlkane są tylko te lokacje do których mozna cos dołożyc. Nie wyświetlana jest lokacja z której pobieramy palete |`ter_LoadUnitINFOtransferPROC`||
 
 
-
-
-
-
-select [dbo].[ter_LoadUnitINFOshort] ( 'ZS00021_p6' ) as PALINFO
- EXEC dbo.stk_findBestLocationForLU_multi 394199 , null, null, 3,0, 3
