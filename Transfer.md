@@ -7,9 +7,13 @@
 ## Transfer palety terminal  
 Proces w repoizytorium `TRASFERLU`
 
+## Parametry grupowanie
+
+| Parametr| Opis | Użyty w |Od wersji|
+|--|--|--|--|
+|**transferTer_InfoShowProductName**|włącza wydruk grupowej listy zbiórki na formatce `doc_autoPrintTaskList`|`doc_autoPrintTaskList`||
 
 
-transferTer_InfoShowProductName
 
 exec   [ter_LoadUnitINFOtransferPROC]   'ZS00021_p6' 
 
