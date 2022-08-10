@@ -11,11 +11,9 @@ Proces w repoizytorium `TRASFERLU`
 
 | Parametr| Opis | Użyty w |Od wersji|
 |--|--|--|--|
-|**transferTer_InfoShowProductName**|włącza wydruk grupowej listy zbiórki na formatce `doc_autoPrintTaskList`|`doc_autoPrintTaskList`||
+|**transferTer_InfoShowProductName**|Wyswietla pełną nazwę produktu przy wyswietlaniu infoirmacji o transferowanej palecie |`ter_LoadUnitINFOshort`||
 
 
-
-exec   [ter_LoadUnitINFOtransferPROC]   'ZS00021_p6' 
 
 
 
