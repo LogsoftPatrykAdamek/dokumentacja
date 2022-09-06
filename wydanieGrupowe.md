@@ -13,8 +13,9 @@ Typ wysłki przechowywany jest w tabeli `doc_order` w polu `doc_orderType`
 |----------------|-------------------------------|-----------------------------|
 |10|**Zbiórka automatyczna**  |Standardowa zbiórka z planowaniem
 |24|**Zaokr. do pełnych palet**  |Podczas splanowania system zaokrągla ilości do pełnych palet przy planowaniu
-|26|**Dowolne produkty**  |Wydanie bez planowania bez tworzenia pozycji zamówienia. System po zeskanowaniu palety sam dodaje odpowiednią pozycje zamówienia.
-|30|**Bez planowania**  |Wydanie bez planowania na terminalu. System bazując na pozycjach zamówienia podpowiada najlepszą paletę i tworzy zadanie
+|26|**Dowolne produkty**  |Wydanie bez planowania bez tworzenia pozycji zamówienia. System po zeskanowaniu palety sam dodaje odpowiednią pozycje zamówienia. Moze byc też wywołany na PC ze stanów magazynowych
+|30|**Bez planowania**  |Wydanie bez planowania na terminalu. System bazując na pozycjach zamówienia podpowiada najlepszą paletę i tworzy zadanie. Moze byc też wywołany na PC ze stanów magazynowych
+|31|**Bez planowania**  |Wydanie jak bez planowania pozwala jednak nie tworzenie zbiórek
 
 
 ## Priorytety wysyłek
