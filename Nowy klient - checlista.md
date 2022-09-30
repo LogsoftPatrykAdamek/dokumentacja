@@ -1,0 +1,5 @@
+
+# Załozenie i konfiguracja zleceniodawdy
+
+
+
